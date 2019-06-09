@@ -101,15 +101,15 @@ def knapsack_SA(capacity, objects):
 
 # Args:   int(Capacity[GiB]), List[Tuple(str(Name), int(Size[MiB]), int(Price))]
 # Return: (price_summary, {'name1', 'name2' , ...})
-def calculate(usb_size, memes):
-    usb_size *= 1024
-    usb_size = int(usb_size)
-    timer = time.perf_counter_ns()
-    result = knapsack_SA(usb_size, memes)
-    timer = time.perf_counter_ns() - timer
-    print("Wynik:", result)
-    print("Czas:", timer/1000000, "ms")
-    return result
+#def calculate(usb_size, memes):
+#    usb_size *= 1024
+#    usb_size = int(usb_size)
+#    timer = time.perf_counter_ns()
+#    result = knapsack_SA(usb_size, memes)
+#    timer = time.perf_counter_ns() - timer
+#    print("Wynik:", result)
+#    print("Czas:", timer/1000000, "ms")
+#    return result
 
 with open('zestaw2') as file:
     capacity = int(file.readline())
@@ -121,4 +121,4 @@ with open('zestaw2') as file:
         meme = tuple(meme)
         memes.append(meme)
 
-print(calculate(capacity, memes))
+#print(calculate(capacity, memes))
